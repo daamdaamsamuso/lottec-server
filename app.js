@@ -19,7 +19,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-const testObj =[{
+const testObj ={
   Account: 0,
   BeginDate: "2021-06-03T00:00:00",
   EndDate: "2021-07-31T23:59:00",
@@ -115,7 +115,7 @@ const testObj =[{
   }],
   LayoutType: 2,
   SoundPosition: 1
-}]
+}
 
 app.use('/', indexRouter);
 app.use('/api',(req,res)=>{
